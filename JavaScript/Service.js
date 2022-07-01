@@ -113,7 +113,7 @@ window.onscroll = function () {
     var getUl = document.getElementById('menuList');
     var nav = document.getElementById('nav');
 
-    if (window.pageYOffset > 560) {
+    if (window.pageYOffset > 450) {
         nav.style.backgroundColor = '#000000';
         getUl.style.background = '#000000';
     } else {
