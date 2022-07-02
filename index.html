@@ -18,9 +18,9 @@
 <body>
 
 
-    <div id="preloader">
+    <!-- <div id="preloader">
         <p class="loader">Loading... Please wait</p>
-    </div>
+    </div> -->
 
 
     <section id="home">
@@ -31,13 +31,13 @@
                 <nav>
                     <ul id="menuList">
                         <li><a id="scroll-link" class="home nav-link active-link" href="#home">Home</a></li>
-                        <li><a id="scroll-link" class="about nav-link" href="#about">About</a></li>
                         <li><a id="scroll-link" class="service nav-link" href="#service">Services</a></li>
+                        <li><a id="scroll-link" class="about nav-link" href="#about">About</a></li>
                         <li><a id="scroll-link" class="work nav-link" href="#work">Works</a></li>
                         <li><a id="scroll-link" class="contact-us nav-link" href="#contact-us">Contact</a></li>
                     </ul>
                 </nav>
-                <img src="images/logo/menu-4.png" class="menu-icon" alt="" onclick="toggleMenu()"> </img>
+                <img src="images/logo/menu-4.png" class="menu-icon" id="toggle" alt="" onclick="toggleMenu()"> </img>
             </div>
 
             <div class="vision-wrapper">
@@ -76,22 +76,6 @@
            -->
 
 
-        </div>
-    </section>
-
-    <section id="about">
-
-        <div class="about-wrapper show">
-            <h1 class="about-title">Who we are</h1>
-            <p class="about-description">
-                The idea was birthed in 2017 and we dedicated several years to the design
-                and development of the digital platform. This concept was brought to life
-                and has since grown into a functional web-based platform, android and
-                iOS app whcih was launched in February 2022. NOIRBLANC Africa Limited
-                is a wholly Zambian owned business that was recently incorporated on
-                02 July 2020. In January 2022, NOIRBLANC AFRICA LIMITED appointed a
-                board of directors to oversee its strategic vision.
-            </p>
         </div>
     </section>
 
@@ -135,6 +119,22 @@
         </div>
 
     </section>
+    <section id="about">
+
+        <div class="about-wrapper show">
+            <h1 class="about-title">Who we are</h1>
+            <p class="about-description">
+                The idea was birthed in 2017 and we dedicated several years to the design
+                and development of the digital platform. This concept was brought to life
+                and has since grown into a functional web-based platform, android and
+                iOS app whcih was launched in February 2022. NOIRBLANC Africa Limited
+                is a wholly Zambian owned business that was recently incorporated on
+                02 July 2020. In January 2022, NOIRBLANC AFRICA LIMITED appointed a
+                board of directors to oversee its strategic vision.
+            </p>
+        </div>
+    </section>
+
 
     <section id="work">
 
@@ -354,11 +354,21 @@
         menuList.style.maxHeight = '0px';
         function toggleMenu() {
 
-            if (menuList.style.maxHeight == '0px') {
+            if (menuList.style.maxHeight == '0px' && window.pageYOffset <600 ) {
                    menuList.style.maxHeight = '190px';
-            } else {
+                   nav.style.backgroundColor = '#000000';
+                   menuList.style.backgroundColor = '#000000';
+            } else if(menuList.style.maxHeight == '0px' && window.pageYOffset >=601) {
+                   nav.style.backgroundColor = '#000000';
+                   menuList.style.backgroundColor = '#000000'; 
+                   menuList.style.maxHeight = '190px';
+            } else if (menuList.style.maxHeight == '190px' && window.pageYOffset >=601) {
+                     menuList.style.maxHeight = '0px';
+                     nav.style.backgroundColor = '#000000';
+            }
+             else {
                 menuList.style.maxHeight = '0px';
-                // nav.style.backgroundColor = 'transparent';
+                nav.style.backgroundColor = 'transparent';
                 // menuList.style.backgroundColor = 'transparent';
 
             }

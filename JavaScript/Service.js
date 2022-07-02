@@ -112,15 +112,26 @@ moveBackgroundImage();
 window.onscroll = function () {
     var getUl = document.getElementById('menuList');
     var nav = document.getElementById('nav');
-
-    if (window.pageYOffset > 450) {
+    var toggle = document.getElementById('toggle');
+    //450
+    if (window.pageYOffset > 600) {
         nav.style.backgroundColor = '#000000';
         getUl.style.background = '#000000';
     } else {
-        nav.style.backgroundColor = 'transparent';
-        getUl.style.backgroundColor = 'transparent';
-        getUl.style.boxShadow = 'none';
-        nav.style.boxShadow = 'none';
+        
+        if (getUl.style.maxHeight == '0px' && window.pageYOffset < 500 ) {
+            
+            nav.style.backgroundColor = 'transparent';
+            getUl.style.backgroundColor = 'transparent';
+        } else {
+             getUl.style.backgroundColor = '#000000';
+            nav.style.backgroundColor = '#000000';
+    
+        }
+        // nav.style.backgroundColor = 'transparent';
+        // getUl.style.backgroundColor = 'transparent';
+        // getUl.style.boxShadow = 'none';
+        // nav.style.boxShadow = 'none';
     }
 }
 
@@ -164,7 +175,7 @@ function loader() {
         loader.style.display = "none";
     })
 }
-loader();
+//loader();
 
 
 function smoothScroll() {
