@@ -368,7 +368,7 @@ nav ul li a:hover:after {
   border: none;
 }
 #play-img {
-  height: 3rem;
+  height: 4rem;
   width:6rem;
 }
 
@@ -883,7 +883,7 @@ footer {
   .about-title {
     padding-bottom: 4.7rem;
     text-align: center;
-    font-size: 20px;
+    font-size: 18px;
     color: gray;
   }
   .about-description {
@@ -902,13 +902,13 @@ footer {
   .service-title {
     padding-bottom: 2rem;
     text-align: center;
-    font-size: 20px;
+    font-size: 18px;
   }
   
   .service-question {
     font-family: montserrat, sans-serif;
     text-align: center;
-    font-size: 22px;
+    font-size: 17px;
   }
   .partner-with-us {
     margin-top: 2rem;
@@ -957,17 +957,23 @@ footer {
     padding-bottom: 3rem;
     padding-left: 0;
     text-align: center;
+    font-size: 18px;
   }
   .fav-pictures {
    text-align: center ;
    padding-left: 0;
    margin: 0 2rem 0 2rem;
+   font-size: 16px;
   }
 
   /* Works ends */
 
   /* Contact starts*/
  
+  .item-stats-count {
+    font-size: 45px;
+  }
+  
   .let-us-talk {
     margin-left: 0;
     padding-top: 0rem;
@@ -995,6 +1001,7 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 1.2rem;
     padding: 0 5rem;
 }
 
@@ -1008,6 +1015,7 @@ footer {
     text-align: center;
     padding-left: 2rem;
     padding-right: 2rem;
+    font-size: 18px;
 }
 
 .drop-us {
@@ -1035,7 +1043,7 @@ footer {
     gap: 1rem;
     color: #fff;
     line-height: 4rem;
-    font-size: 23px;
+    font-size: 17px;
 }
 
 .location {

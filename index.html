@@ -311,7 +311,7 @@
                 </span>
             </footer>
 
-            <p id="arrow"> <span id="arrow-up">&#8593</span></p>
+            <a href="#home" id="arrow"> <span id="arrow-up">&#8593</span></a>
         </div>
             </div>
 
@@ -350,13 +350,16 @@
         });
 
         var menuList = document.getElementById('menuList');
+        var nav = document.getElementById('nav');
         menuList.style.maxHeight = '0px';
         function toggleMenu() {
 
             if (menuList.style.maxHeight == '0px') {
-                menuList.style.maxHeight = '190px';
+                   menuList.style.maxHeight = '190px';
             } else {
                 menuList.style.maxHeight = '0px';
+                // nav.style.backgroundColor = 'transparent';
+                // menuList.style.backgroundColor = 'transparent';
 
             }
         }
