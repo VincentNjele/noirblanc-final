@@ -177,7 +177,7 @@
 }
 
 
-a {
+.link {
   text-decoration: none;
   transition-duration: 10s;
   transition-delay: 1s;
@@ -216,7 +216,7 @@ a {
 .home-wrapper {
   width: 100%;
   min-height: fit-content;
-  background: -webkit-linear-gradient(rgba(10, 10, 10, 0.5), rgba(10, 10, 10, 0.5)), url(../images/images/slider/image2.jpg);
+  background: -webkit-linear-gradient(rgba(10, 10, 10, 0.5), rgba(10, 10, 10, 0.5)), url(../images/images/slider/Simage6.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -238,7 +238,7 @@ a {
   height: 4rem;
   width: 6rem;
   cursor: pointer;
-  margin: 20px 1rem 10px 1rem;
+  margin: 25px 1rem 10px 1rem;
  
 }
 .menu-icon {
@@ -250,14 +250,13 @@ a {
 }
 nav {
   flex: 1;
-  text-align: right;
-  margin-right: 2rem;
-  
+  text-align: left;
+  margin-left: 1rem;
 }
 nav ul li {
   list-style: none;
   display: inline-block;
-  margin-right: 25px;
+  margin-left: 25px;
 }
 nav ul li a {
   text-decoration: none;
@@ -274,17 +273,18 @@ nav ul li a::after {
   height: 3px;
   width: 0;
   left: 0;
-  bottom: -7px;
+  bottom: -5px;
   transition: 0.3s;
 }
 
-nav ul li a:hover:after {
+nav ul li .link:hover:after {
   width: 100%;
 }
 .vision {
   font-family: montserrat, sans-serif;
   color: #fff;
   font-size: 42px;
+  padding-top: 5rem;
   margin-left: 3rem;
   max-width: 45rem;
   
@@ -296,12 +296,62 @@ nav ul li a:hover:after {
   font-family: montserrat, sans-serif;
 
 }
+.booking-registration-wrapper {
+  margin-right: 3rem;
+  margin-left: 5rem;
+  display: flex;
+
+}
+.booking-registration-wrapper a {
+  text-decoration: none;
+}
+#service-booking {
+  border: 1px solid #fff;
+  color: #fff;
+  font-family: montserrat, sans-serif;
+  font-size: 18px;
+  margin-top: 6px;
+  margin-right: 7px;
+  background: transparent;
+   padding: 5px;
+  border-radius: 40px;
+  position: relative;
+  text-transform: capitalize;
+}
+
+#service-booking:hover {
+  background-color: #d8dbde;
+  transition: 0.4s ease-in-out;
+}
+#service-booking::after {
+  transition: 2s;
+}
+#join-as-pro {
+  border: 1px solid #fff;
+  border-radius: 40px;
+  margin-top: 6px;
+  color: #fff;
+  font-family: montserrat, sans-serif;
+  font-size: 18px;
+  background: transparent;
+  padding: 5px;
+  /* padding: 10px 1rem 10px 1rem; */
+  border-radius: 40px;
+  position: relative;
+  text-transform:capitalize;
+}
+
+#join-as-pro:hover {
+  background-color: #d8dbde;
+  transition: all 0.4s;
+}
+
 #alternative {
   font-family: montserrat, sans-serif;
   font-size: 20px;
   color: #ffff;
   margin-left: 3rem;
-  margin-top: 1rem;
+  margin-top: 3rem;
 }
 .vision-wrapper {
   margin-top: 8rem;
@@ -309,7 +359,7 @@ nav ul li a:hover:after {
 }
 #vision-description {
   font-family: montserrat, sans-serif;
-  margin-top: 2rem;
+  margin-top: 3rem;
   font-size: 21px;
   font-weight:500;
   margin-left: 3rem;
@@ -468,7 +518,7 @@ nav ul li a:hover:after {
 
 #work {
   width: 100%;
-  min-height: fit-content;
+  height: fit-content;
   background: #fff;
   padding-top: 3rem;
   padding-bottom: 1rem;
@@ -490,21 +540,33 @@ nav ul li a:hover:after {
   margin: 5rem 20rem 0 0;
   font-family: montserrat, sans-serif;
 }
-.sample-works {
+/* .sample-works {
   width: 70%;
-  height: 45rem;
+  height: 55rem;
   margin: 0 auto;
   z-index: -1;
-  display: flex;
-}
-.container-swiper {
-  width:100%;
-  display: flex;
-  align-items: center;
+  height: 100rem;
+ 
+} */
+.image-gallery {
+  
   justify-content: center;
+  align-items: center;
+  right: 1px;
+  width:100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(220px, 220px));
+  row-gap: 1rem;
+  gap: 1rem;
   height: fit-content;
 }
 
+#img {
+  width: 220px;
+  height: 220px;
+  object-position: center;
+  border-radius: 50%;
+}
 .swiper {
   width: 80%;
   height: 80%;
@@ -806,7 +868,7 @@ footer {
 }
 
 /* Contact ends */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 825px) {
 
   nav ul {
     width: 100%;
@@ -818,8 +880,26 @@ footer {
   }
   nav ul li {
     display: block;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .booking-registration-wrapper {
+    display: flex;
+    margin-left: 0;
+    display: none;
+  }
+  booking-registration-wrapper-two {
+    display: block;
+    font-size: 18px;
+  }
+  #service-booking {
+    font-size: 15px;
+    border: 1px solid #fff;
+    text-align: center;
+  }
+  #join-as-pro {
+    font-size: 15px;
+    text-align: center;
   }
   .menu-icon {
     display: block;
@@ -936,10 +1016,7 @@ footer {
 
   /* Works starts*/
 
-  .sample-works {
-    width: 94%;
-    height: 30rem;
-  }
+ 
   .container-swiper {
     width:100%;
     height: 60vh;
@@ -965,6 +1042,24 @@ footer {
    padding-left: 0;
    margin: 0 2rem 0 2rem;
    font-size: 16px;
+  }
+  .image-gallery {
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width:100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(100px, 100px));
+    row-gap: 1rem;
+    gap: 1rem;
+    height: fit-content;
+    position: relative;
+  }
+  #img {
+    width: 100px;
+    height: 100px;
+    object-position: center;
+    border-radius: 50%;
   }
 
   /* Works ends */
@@ -1083,8 +1178,15 @@ footer {
   /* Contact ends*/
 } 
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 769px) {
 
+ nav { flex: 1;
+  text-align: left;
+  margin-left: 0rem;
+ }
+ nav ul li {
+  margin-left: 0px;
+ }
   .fav-pictures {
     
     line-height: 2;
@@ -1113,31 +1215,62 @@ footer {
     width: 100%;
     height: 100%;
   }
+ 
+}
+
+@media only screen and (min-width: 826px) {
+
+  nav {
+  
+    margin-left: 1rem;
+    
+  }
+  nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 0px;
+  }
+  nav ul li a {
+    padding: 6px 2px;
+  }
+   .booking-registration-wrapper {
+    margin-right: 20px;
+    margin-left: 1rem;
+  }
+  .booking-registration-wrapper-two {
+    display: none;
+  }
+}
+@media only screen and (min-width: 980px) {
+
+  nav {
+    margin-left: 1rem;
+  }
+  .booking-registration-wrapper {
+    margin-right: 20px;
+    margin-left: 5rem;
+    display: flex;
+    position: relative;
+    right: 0px;
+ }
+
 }
 @media only screen and (min-width: 1024px) {
 
-  .sample-works {
-    width: 70%;
-    height: 45rem;
-    margin: 0 auto;
-    z-index: -1;
-    display: flex;
-  }
-  .container-swiper {
-    width:100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-  }
+
   
-  .swiper {
-    width: 80%;
-    height: 80%;
+  nav {
+    margin-left: 3rem;
   }
-  .swiper-slide img {
-    width: 100%;
-    min-height: 100%;
-  }
+  nav ul li {
+    margin-left: 20px;
+   }
+  .booking-registration-wrapper {
+    margin-right: 20px;
+    margin-left: 3rem;
+    display: flex;
+    position: relative;
+    right: 0px;
+ }
 
 }
